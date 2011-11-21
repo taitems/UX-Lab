@@ -1,0 +1,67 @@
+#container {
+	width: 600px;
+	height: 238px;
+	margin: 100px auto 0 auto;
+	position: relative;
+	background: url(../img/overlay.png) 0 0 no-repeat;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+#mask {
+	width: 536px;
+	height: 172px;
+	position: absolute;
+	top: 33px;
+	left: 31px;
+	z-index: 3;
+	overflow: hidden;
+	-webkit-perspective: 100;
+	-webkit-perspective-origin: center bottom;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25) inset;
+}
+
+#wave {
+	background: url(../img/wave.png) 0 0 repeat-x;
+	width: 1000px;
+	height: 60px;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: 2;
+	-webkit-animation-name: "waveMovement";
+	-webkit-animation-duration: 9s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+.duck {
+	outline: none;
+	background: url(../img/duck.png) 0 0 no-repeat;
+	width: 86px;
+	height: 120px;
+	position: absolute;
+	bottom: 10px;
+	left: 40%;
+	-webkit-transform: rotateX(90deg);
+	-webkit-transform-origin: center bottom;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.hit {
+	background-position: -86px 0 !important;
+	-webkit-transform: rotateX(90deg);
+}
+
+.create {
+	-webkit-transform: rotateX(0deg);
+}
+
+@-webkit-keyframes 'waveMovement' {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -212px;
+	}
+}

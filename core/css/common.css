@@ -1,0 +1,15 @@
+#backLink {
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 60px;
+	height: 45px;
+	background: url(../img/labs_back.png);
+	opacity: 0.15;
+	-webkit-transition: opacity 0.3s linear;
+}
+
+	#backLink:hover {
+		opacity: 0.3;
+	}

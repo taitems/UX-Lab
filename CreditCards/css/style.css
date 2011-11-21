@@ -1,0 +1,75 @@
+/* === CREDIT CARD PAGE === */
+fieldset {
+	width: 500px;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+.field {
+	border-top: 1px solid #EEE;
+	padding: 10px 0;
+}
+	.field:last-of-type {
+		border-bottom: 1px solid #EEE;
+	}
+	.field.lastOfType {
+		border-bottom: 1px solid #EEE;
+	}
+	.field:first-of-type {
+		margin-top: 3em;
+	}
+	.field.firstOfType {
+		margin-top: 3em;
+	}
+
+.field label {
+	display: inline-block;
+	text-align: right;
+	width: 125px;
+	margin-right: 8px;
+	font-weight: bold;
+	height: 24px;
+	line-height: 24px;
+	vertical-align: top;
+}
+
+.field input {
+	width: 200px;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05) inset;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05) inset;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05) inset;
+	height: 24px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.field .expiry, .field .ccv {
+	width: 50px;
+}
+
+#cards {
+	display: inline-block;
+}
+#cards span {
+	display: inline-block;
+	width: 32px;
+	height: 24px;
+	background-image: url(../img/sprite.png);
+	margin: 0 6px 0 0;
+}
+
+	span.active {
+		background-position-y: -24px !important;
+	}
+
+	#amex {
+		background-position: -64px 0;
+	}
+	
+	#mastercard {
+		background-position: 0 0;
+	}
+	
+	#visa {
+		background-position: -32px 0;
+	}
+
