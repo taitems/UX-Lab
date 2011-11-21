@@ -1,0 +1,79 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../core/css/normalise.css">
+  <link rel="stylesheet" href="../core/css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../core/js/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+	<a href="../index.html" id="backLink"></a>
+
+	<fieldset>
+	
+		<h1>Passive Credit Card Type Selection</h1>
+		
+		<p>
+			If you begin typing in the card number area, the JavaScript will automatically detect the card type and colourise the relevant image.
+		</p>
+		
+		<p>
+			None of the information you enter is stored.
+		</p>
+		
+		<div class="field firstOfType">
+			<label>
+				Card Type:
+			</label>
+			
+			<span id="cards">
+			
+				<span id="amex"></span>
+				<span id="mastercard"></span>
+				<span id="visa"></span>
+			
+			</span>
+		</div>
+		
+		<div class="field">
+			<label>
+				Card Number:
+			</label>
+			<input id="cardNumber" type="text">
+		</div>
+		
+		
+		<div class="field">
+			<label>
+				Expiry:
+			</label>
+			<input class="expiry" type="text">
+			<input class="expiry" type="text">
+		</div>
+		
+		
+		<div class="field lastOfType">
+			<label>
+				CCV:
+			</label>
+			<input class="ccv" type="text">
+		</div>
+		
+	</fieldset>
+	
+	<script src="../core/js/jquery-1.6.2.min.js"></script>
+	<script defer src="js/script.js"></script>
+
+</body>
+</html>

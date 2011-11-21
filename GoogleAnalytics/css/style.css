@@ -1,0 +1,101 @@
+/* === HIGHCHARTS / GOOGLE ANALYTICS PAGE === */
+#main {
+	min-width: 700px;
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+
+/* === MODULES ===*/
+.module {
+	margin-bottom: 20px;
+}
+.module h2 {
+	background: #666666;
+	color: #FFF;
+	margin: 0;
+	padding: 8px 10px;
+	font-size: 14px;
+		-webkit-border-radius: 3px 3px 0 0;
+		-moz-border-radius: 3px 3px 0 0;
+		border-radius: 3px 3px 0 0;
+}
+.module.left {
+	float: left;
+	width: 50%;
+}
+.module.left .inner {
+	margin-right: 10px;
+}
+.module.right {
+	float: right;
+	width: 50%;
+}
+.module.right .inner {
+	margin-left: 10px;
+}
+.moduleFooter {
+	background: #e5e5e5;
+	border: 1px solid #bbbbbb;
+	padding: 8px;
+		-webkit-border-radius: 0 0 3px 3px;
+		-moz-border-radius: 0 0 3px 3px;
+		border-radius: 0 0 3px 3px;
+}
+.moduleFooter a {
+	font-weight: bold;
+	font-size: 11px;
+	color: #115ba1 !important;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+
+
+
+/* === CHARTS === */
+#pageviews {
+	height: 200px;
+}
+
+#traffic {
+	height: 195px;
+	border: #dddddd solid;
+	border-width: 0 1px 0 1px;
+}
+
+
+
+
+/* === TABLE STUFF === */
+#tableWrapper {
+	border: #dddddd solid;
+	border-width: 0 1px 0 1px;
+}
+#tableWrapper table {
+	width: 100%;
+}
+#tableWrapper th {
+	background: #e5e5e5;
+}
+#tableWrapper th, #tableWrapper td {
+	text-align: right;
+	border-bottom: 1px solid #bbbbbb;
+	padding: 7px;
+	font-size: 11px;
+}
+#tableWrapper tr:last-child td {
+	border-bottom: none;
+}
+#tableWrapper tbody tr:nth-child(even) td {
+	background: #f9f9f9;
+}
+#tableWrapper .pageName {
+	text-align: left
+}
+#tableWrapper a {
+	text-decoration: none;
+	color: #115ba1;
+}
