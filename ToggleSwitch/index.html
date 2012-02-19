@@ -1,0 +1,65 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../core/css/common.css">
+  <link rel="stylesheet" href="../core/css/prettify.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <a href="../index.html" id="backLink"></a>
+
+  <div id="container">
+
+    <h1>jQuery.UI.toggleSwitch()</h1>
+
+    <p>
+      This toggle plugin was developed for sites that already run jQuery UI and don't want the extra bloat of another library. It draws upon the theme slider for the look and feel, and can be applied to <code>&lt;select&gt;</code> elements with two child options.
+    </p>
+
+    <pre class="prettyprint">$(".selector").toggleSwitch({
+  highlight: true, // default
+  width: 25, // default
+  change: function(e) {
+    console.log("i changed my value")
+  } // default: null
+});</pre>
+
+    <p>
+      The value of the underlying <code>&lt;select&gt;</code> is updated, so this plugin is form friendly.
+    </p>
+
+    <hr>
+
+    <iframe src="iframe-kiandra.html" frameborder="0" scrolling="no"></iframe>
+
+    <iframe src="iframe-aristo.html" frameborder="0" scrolling="no"></iframe>
+
+    <iframe src="iframe-stock.html" frameborder="0" scrolling="no"></iframe>
+
+    <hr>
+
+    <p>
+      <strong>Known Issue:</strong> There is an IE specific animation bug in jQuery core that was introduced around the 1.6 - 1.7 mark. I wanted to delay the release of this until it was rectified, but it doesn't look like happening any time soon.
+    </p>
+
+  </div>
+
+  <script src="../core/js/prettify.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>
