@@ -1,0 +1,33 @@
+body {
+  padding-top: 50px;
+}
+#container {
+  width: 660px;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 200px;
+  height: 125px;
+}
+
+body.iframe {
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body.iframe h2 {
+  font-size: 18px;
+}
+
+body.iframe label {
+  width: 45px;
+}
+
+body.iframe label:first-child {
+  text-align: right;
+}
+
+body.iframe div.ui-toggle-switch {
+  margin: 0 0 6px 0;
+}

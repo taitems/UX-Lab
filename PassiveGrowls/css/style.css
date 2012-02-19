@@ -1,0 +1,28 @@
+#main {
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+}
+p a {
+	text-decoration: underline;
+}
+.idle {
+  color: red;
+}
+.active {
+  color: green;
+}
+#jGrowl div {
+  color: #FFF !important;
+}
+#jGrowl > div {
+	-moz-border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+.ui-dialog-content div {
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	background: #F7F7F7;
+	padding: 6px 4px;
+}

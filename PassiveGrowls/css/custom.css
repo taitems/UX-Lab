@@ -1,0 +1,16 @@
+body {
+  padding-top: 50px;
+} 
+#main {
+  width: 600px;
+  margin: 0 auto;
+}
+.idle {
+  color: red;
+}
+.active {
+  color: green;
+}
+#jGrowl div {
+  color: #FFF !important;
+}
