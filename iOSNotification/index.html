@@ -1,0 +1,155 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>HTML iOS Notifications</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/notify.css">
+  <link rel="stylesheet" href="../core/css/common.css">
+  <link rel="stylesheet" href="../core/css/prettify.css">
+  <script src="js/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <a href="../index.html" id="backLink" class="white"></a>
+
+  <div id="container">
+    <h1>HTML iOS Notifications</h1>
+    <p>
+      iOS-style notifications implemented with CSS3 and JavaScript. Read the blog post or alternatively download or log issues on the GitHub repository.
+    </p>
+    <h3>A Quick Demo</h3>
+    <p>
+      <button id="default" class="btn">Default</button>
+      <button id="mailNotification" class="btn">Message Demo</button>
+    </p>
+<pre class="prettyprint">
+// default example
+ios.notify(); 
+
+// an example message
+ios.notify({
+  title: "Michael Bluth",
+  message: "It's as plain as the Ann on egg's face."
+});</pre>
+    <p>&nbsp;</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Parameter
+          </th>
+          <th>
+            Default
+          </th>
+          <th>
+            Expects
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            delay
+          </td>
+          <td>
+            5000
+          </td>
+          <td>
+            Number (milliseconds)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            sticky
+          </td>
+          <td>
+            false
+          </td>
+          <td>
+            Boolean
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            className
+          </td>
+          <td>
+            "message"
+          </td>
+          <td>
+            String
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            title
+          </td>
+          <td>
+            "Notification"
+          </td>
+          <td>
+            String
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            message
+          </td>
+          <td>
+            "Lorem ipsum dolor sit amet."
+          </td>
+          <td>
+            String
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            url
+          </td>
+          <td>
+            null
+          </td>
+          <td>
+            String (url)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            click
+          </td>
+          <td>
+            null
+          </td>
+          <td>
+            Function
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../core/js/prettify.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ios.notify.js"></script>
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>
