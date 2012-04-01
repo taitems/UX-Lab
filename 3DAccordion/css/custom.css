@@ -1,0 +1,115 @@
+html {
+  height: 100%;
+    background: #2e3847 -moz-linear-gradient(top, #141921 0%, #2e3847 100%) no-repeat !important; /* FF3.6+ */
+    background: #2e3847 -webkit-gradient(linear, left top, left bottom, color-stop(0%,#141921), color-stop(100%,#2e3847)) no-repeat !important; /* Chrome,Safari4+ */
+    background: #2e3847 -webkit-linear-gradient(top, #141921 0%,#2e3847 100%) no-repeat !important; /* Chrome10+,Safari5.1+ */
+    background: #2e3847 -o-linear-gradient(top, #141921 0%,#2e3847 100%) no-repeat !important; /* Opera11.10+ */
+    background: #2e3847 -ms-linear-gradient(top, #141921 0%,#2e3847 100%) no-repeat !important; /* IE10+ */
+    background: #2e3847 linear-gradient(top, #141921 0%,#2e3847 100%) no-repeat !important; /* W3C */
+}
+body {
+  padding-top: 50px;
+}
+body, h1 {
+  background: none;
+  color: #FFF;
+}
+
+#container {
+  width: 400px;
+  margin: 0 auto;
+}
+  #container h1 {
+    font-size: 24px;
+  }
+  #container p {
+    text-align: justify;
+  }
+  #container p a {
+    font-weight: bold;
+    color: #FFF !important;
+    text-decoration: underline;
+  }
+
+#vanillaAnimation {
+  display: inline-block;
+  width: 250px;
+  padding: 10px;
+}
+
+.accordion {
+  width: 250px;
+  margin: 25px 0;
+  -webkit-perspective: 200;
+}
+
+.accordion .static {
+  background: #FFF;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+  .accordion .static:first-child {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #5d1505;
+    text-shadow: 0 -1px 0 #560000;
+    color: #FFF;
+      background: -moz-linear-gradient(top, #8b1d04 0%, #6c1906 100%) !important; /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8b1d04), color-stop(100%,#6c1906)) !important; /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #8b1d04 0%,#6c1906 100%) !important; /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #8b1d04 0%,#6c1906 100%) !important; /* Opera11.10+ */
+      background: -ms-linear-gradient(top, #8b1d04 0%,#6c1906 100%) !important; /* IE10+ */
+      background: linear-gradient(top, #8b1d04 0%,#6c1906 100%) !important; /* W3C */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+          -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.17) inset;
+          -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.17) inset;
+          box-shadow: 0 1px 0 rgba(255,255,255,0.17) inset;
+  }
+
+.accordion .flapUp, .accordion .flapDown {
+  height: 0;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+
+.flapUp {
+  -webkit-transform: rotateX(90deg);
+  -webkit-transform-origin: center bottom;
+  background-color: #CCC;
+}
+.flapDown {
+  -webkit-transform: rotateX(-90deg);
+  -webkit-transform-origin: center top;
+  background-color: #BBB;
+}
+
+.openCSSAnimation .flapUp, .openCSSAnimation .flapDown {
+  -webkit-transform: rotateX(0deg);
+  height: 30px;
+  background-color: #FFF;
+}
+
+
+
+
+
+
+
+#noAnim {
+  display: none;
+  background: #fff5e4;
+  border: 1px solid #decaab;
+  padding: 10px 20px;
+  color: #000;
+}
+.no-csstransforms #noAnim, .no-csstransforms3d #noAnim, .no-csstransitions #noAnim, .no-js #noAnim {
+  display: block;
+}

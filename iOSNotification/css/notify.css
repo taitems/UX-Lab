@@ -1,0 +1,172 @@
+#notificationWrapper {
+  position: fixed;
+  top: 3px;
+  left: 0;
+  width: 100%;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+}
+#notificationWrapper .notification {
+  display: block;
+  text-decoration: none;
+  width: 60%;
+  overflow: hidden;
+  margin: 0 auto 4px auto;
+    -webkit-transform-origin: center top;
+    -moz-transform-origin: center top;
+    -o-transform-origin: center top;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -o-border-radius: 6px;
+      border-radius: 6px;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ffffff 0%, #e6e6e6 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* IE10+ */
+        background: linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
+          -webkit-box-shadow: 0 -1px 0 #FFF inset;
+          -moz-box-shadow: 0 -1px 0 #FFF inset;
+          box-shadow: 0 -1px 0 #FFF inset;
+
+}
+#notificationWrapper .notification.hasClick {
+  cursor: pointer;
+}
+#notificationWrapper .icon {
+  display: inline-block;
+  border-right: 1px solid #dddddd;
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+  float: left;
+}
+#notificationWrapper .notifyText {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+  overflow: hidden;
+}
+#notificationWrapper .notifyTitle {
+  font-weight: bold;
+  font-size: 14px;
+  height: 14px;
+  display: block;
+  padding: 3px 0 0 0;
+}
+#notificationWrapper .notifyMessage {
+  font-size: 12px;
+  padding: 0;
+  display: block;
+}
+
+
+
+  #notificationWrapper .message .icon {
+    background: transparent url(../img/icon_message.png) center center no-repeat;
+  }
+
+
+
+
+
+@-webkit-keyframes slideDown {
+  0%   {
+    opacity: 0; 
+    -webkit-transform: rotateX(-90deg);
+  }
+  100%   {
+    opacity: 1; 
+    -webkit-transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes slideUp {
+  0%   {
+    opacity: 1; 
+    -webkit-transform: rotateX(0deg);
+  }
+  100%   {
+    opacity: 0; 
+    -webkit-transform: rotateX(-90deg);
+  }
+}
+
+
+
+
+@-moz-keyframes slideDown {
+  0%   {
+    opacity: 0; 
+    -moz-transform: rotateX(-90deg);
+  }
+  100%   {
+    opacity: 1; 
+    -moz-transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes slideUp {
+  0%   {
+    opacity: 1; 
+    -moz-transform: rotateX(0deg);
+  }
+  100%   {
+    opacity: 0; 
+    -moz-transform: rotateX(-90deg);
+  }
+}
+
+
+
+
+@-o-keyframes slideDown {
+  0%   {
+    opacity: 0; 
+    -o-transform: rotateX(-90deg);
+  }
+  100%   {
+    opacity: 1; 
+    -o-transform: rotateX(0deg);
+  }
+}
+@-o-keyframes slideUp {
+  0%   {
+    opacity: 1; 
+    -o-transform: rotateX(0deg);
+  }
+  100%   {
+    opacity: 0; 
+    -o-transform: rotateX(-90deg);
+  }
+}
+
+
+
+
+#notificationWrapper .animateIn {
+  -webkit-animation: slideDown 300ms;
+  -moz-animation: slideDown 300ms;
+  -o-animation: slideDown 300ms;
+}
+
+#notificationWrapper .animateOut {
+  -webkit-animation: slideUp 300ms;
+  -moz-animation: slideUp 300ms;
+  -o-animation: slideUp 300ms;
+}
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #notificationWrapper .notification {
+    width: 100%;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  #notificationWrapper .message .icon {
+    background-image: url(../img/icon_message@2x.png);
+    background-size: 50% 50%;
+  }
+}

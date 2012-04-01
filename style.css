@@ -10,6 +10,12 @@ h1 {
 	overflow: hidden;
 	margin: 20px auto 0 auto;
 }
+p.blurb {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 28px;
+	margin-bottom: 80px;
+}
 ul li {
 	list-style-type: none;
 	padding: 20px 0;

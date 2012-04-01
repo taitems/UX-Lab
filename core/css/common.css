@@ -9,7 +9,13 @@
 	opacity: 0.15;
 	-webkit-transition: opacity 0.3s linear;
 }
-
 	#backLink:hover {
 		opacity: 0.3;
 	}
+	#backLink.white {
+	  background-image: url(../../core/img/labs_back_white.png);
+	  opacity: 0.25;
+	}
+		#backLink.white:hover {
+		  opacity: 0.7;
+		}
