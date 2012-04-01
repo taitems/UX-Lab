@@ -32,7 +32,9 @@ var ios = (function() {
 
 	var notify = function(params) {
 
-		var settings = $.extend(defaults,params);
+		var clonedDefaults = $.extend({},defaults);
+
+		var settings = $.extend(clonedDefaults,params);
 
 		var $notify = $('<div class="notification"><span class="icon" /><span class="notifyText"><span class="notifyTitle"></span><span class="notifyMessage"></span></span></div>');
 
