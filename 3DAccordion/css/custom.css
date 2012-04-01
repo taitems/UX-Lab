@@ -40,7 +40,10 @@ body, h1 {
 .accordion {
   width: 250px;
   margin: 25px 0;
-  -webkit-perspective: 200;
+    -webkit-perspective: 200px;
+    -moz-perspective: 200px;
+    -o-perspective: 200px;
+    perspective: 200px;
 }
 
 .accordion .static {
@@ -81,20 +84,35 @@ body, h1 {
 }
 
 .flapUp {
-  -webkit-transform: rotateX(90deg);
-  -webkit-transform-origin: center bottom;
   background-color: #CCC;
+    -webkit-transform: rotateX(90deg);
+    -webkit-transform-origin: center bottom;
+    -moz-transform: rotateX(90deg);
+    -moz-transform-origin: center bottom;
+    -o-transform: rotateX(90deg);
+    -o-transform-origin: center bottom;
+    transform: rotateX(90deg);
+    transform-origin: center bottom;
 }
 .flapDown {
-  -webkit-transform: rotateX(-90deg);
-  -webkit-transform-origin: center top;
   background-color: #BBB;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: center top;
+    -moz-transform: rotateX(-90deg);
+    -moz-transform-origin: center top;
+    -o-transform: rotateX(-90deg);
+    -o-transform-origin: center top;
+    transform: rotateX(-90deg);
+    transform-origin: center top;
 }
 
 .openCSSAnimation .flapUp, .openCSSAnimation .flapDown {
-  -webkit-transform: rotateX(0deg);
   height: 30px;
   background-color: #FFF;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
 
 
