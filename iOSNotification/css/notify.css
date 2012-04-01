@@ -3,9 +3,10 @@
   top: 3px;
   left: 0;
   width: 100%;
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -o-perspective: 1000;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
 }
 #notificationWrapper .notification {
   display: block;
@@ -31,7 +32,6 @@
           -webkit-box-shadow: 0 -1px 0 #FFF inset;
           -moz-box-shadow: 0 -1px 0 #FFF inset;
           box-shadow: 0 -1px 0 #FFF inset;
-
 }
 #notificationWrapper .notification.hasClick {
   cursor: pointer;
