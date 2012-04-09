@@ -1,0 +1,21 @@
+.bootstrap-footnote {
+	width: 19px;
+	height: 10px;
+	display: inline-block;
+	background: url(../img/ellipsis.png);
+	overflow: hidden;
+	text-indent: -999px;
+	margin: 0 2px 0 6px;
+	vertical-align: middle;
+}
+
+.popover h3:empty {
+	display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.bootstrap-footnote {
+		background-image: url(../img/ellipsis@2x.png);
+		background-size: 100% 100%;
+	}
+}

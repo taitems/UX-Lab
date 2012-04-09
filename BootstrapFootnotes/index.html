@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bootstrap Footnote Script - UX Lab</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link rel="stylesheet" href="../core/css/bootstrap.css">
+  <link rel="stylesheet" href="../core/css/common.css">
+  <link rel="stylesheet" href="../core/css/prettify.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/bootstrap.footnotes.css">
+  <script src="../core/js/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <a href="../index.html" id="backLink"></a>
+
+  <div class="container">
+
+    <h1>bootstrap.footnotes.js</h1>
+
+    <h4>Example HTML</h4>
+    <p>
+      Using a number fallback is good accessibility, and resembles normal footnotes/endnotes.
+    </p>
+    <pre class="prettyprint">
+&lt;sup data-text="This is an aside"&gt;1&lt;/sup&gt;</pre>
+
+    <h4>JavaScript Invokation</h4>
+    <pre class="prettyprint">
+// default syntax, searches for "sup" element
+$.footnotes();
+
+// optionally specify a selector
+$.footnotes(".foo");</pre>
+  
+    <h4>Example</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis euismod nulla, vel adipiscing nisl egestas a. In varius mauris non lorem tristique fermentum eu in mauris. Etiam eget elit mauris. Mauris consequat dapibus mi, vel lacinia sem vehicula nec. Phasellus vehicula, lectus id rhoncus venenatis, massa mi mattis velit, vel gravida ante nisi vel magna. Aenean porttitor leo eu urna viverra vel consequat velit porttitor<sup data-text="This is an aside. It's not techincally a footnote or an endnote. It's tangently related to the main content.">1</sup>. Nullam leo risus, consequat ut cursus nec, imperdiet ut felis. Etiam pulvinar nibh vel nisi sagittis vel tempus massa placerat. Praesent viverra massa a lectus consequat pulvinar iaculis ac dolor. Vestibulum condimentum ultrices nibh, eu commodo risus scelerisque pharetra.
+    </p>
+
+    <p>
+      Sed sit amet nisl eget diam suscipit sodales. Integer sed sem vel justo consequat varius quis vel sem. Donec ac est urna. Donec ut sem ligula, at faucibus neque<sup class="thisOnly" data-text="This is another.">2</sup>. In auctor nisl eu urna tincidunt aliquet. Etiam sed dui ut est pulvinar ultricies. Sed laoreet nibh sed eros mattis porttitor. Ut et elit nec turpis rutrum malesuada non sed lacus.
+    </p>
+  
+    <h4>Requirements</h4>
+    <ul>
+      <li>jQuery Latest</li>
+      <li>Bootstrap CSS</li>
+      <li>Bootstrap Tooltips</li>
+      <li>Bootstrap Popovers</li>
+      <li>This plugins JS/CSS/Images</li>
+    </ul>
+  
+    <h4>GitHub Repository</h4>
+    <p>
+      <a href="https://github.com/taitems/bootstrap.footnotes.js" target="_blank">Download - Issues - Fork - Watch</a>
+    </p>
+
+  </div>
+
+  <script src="../core/js/jquery.min.js"></script>
+  <script src="../core/js/bootstrap-tooltip.js"></script>
+  <script src="../core/js/bootstrap-popover.js"></script>
+  <script src="../core/js/prettify.js"></script>
+  <script src="js/bootstrap.footnotes.js"></script>
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>
