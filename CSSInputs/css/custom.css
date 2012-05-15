@@ -1,0 +1,125 @@
+/* === FANCY CHECKBOX === */
+.fancy {
+  display: inline-block;
+  width: 55px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #424242;
+  padding: 0;
+  margin: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -o-border-radius: 20px;
+      border-radius: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+          background: #505050; /* Old browsers */
+          background: -moz-linear-gradient(top,  #505050 0%, #5e5e5e 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#505050), color-stop(100%,#5e5e5e)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top,  #505050 0%,#5e5e5e 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top,  #505050 0%,#5e5e5e 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(top,  #505050 0%,#5e5e5e 100%); /* IE10+ */
+          background: linear-gradient(top,  #505050 0%,#5e5e5e 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505050', endColorstr='#5e5e5e',GradientType=0 ); /* IE6-9 */
+            -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2) inset;
+            -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2) inset;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2) inset;
+              -webkit-transition: all 300ms ease-in-out;
+              -moz-transition: all 300ms ease-in-out;
+              -o-transition: all 300ms ease-in-out;
+              transition: all 300ms ease-in-out;
+}
+.fancy, .fancy:before, .fancy:after {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.fancy:before {
+  position: absolute;
+  top: -3px;
+  left: 34px;
+  width: 24px;
+  height: 24px;
+  content: "";
+    border-radius: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.80), 0 10px 0 rgba(255,255,255,0.4) inset;
+        background: #f7f7f7; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f7f7f7 0%, #c7c7c7 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#c7c7c7)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #f7f7f7 0%,#c7c7c7 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #f7f7f7 0%,#c7c7c7 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #f7f7f7 0%,#c7c7c7 100%); /* IE10+ */
+        background: linear-gradient(top,  #f7f7f7 0%,#c7c7c7 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#c7c7c7',GradientType=0 ); /* IE6-9 */
+}
+.fancy:after {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  height: 20px;
+  line-height: 19px;
+  content: attr(data-off-value);
+  font-size: 10px;
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 #424242;
+}
+.fancy:checked {
+  border: 1px solid #0368d0;
+    background: #0377ee; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0377ee 0%, #1084fb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0377ee), color-stop(100%,#1084fb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #0377ee 0%,#1084fb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #0377ee 0%,#1084fb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #0377ee 0%,#1084fb 100%); /* IE10+ */
+    background: linear-gradient(top,  #0377ee 0%,#1084fb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0377ee', endColorstr='#1084fb',GradientType=0 ); /* IE6-9 */
+}
+.fancy:checked:before {
+  left: -3px;
+}
+.fancy:checked:after {
+  content: attr(data-on-value);
+  left: 27px;
+  text-shadow: 0 -1px 0 #0553a4;
+}
+
+
+
+
+
+
+
+/* === THE REST === */
+body {
+  padding: 20px 0;
+  font-family: Arial, Helvetica, san-serif;
+  font-size: 13px;
+}
+.container {
+  width: 300px;
+  margin: 0 auto;
+}
+h2 {
+  font-size: 16px;
+  margin: 20px 0 5px 0;
+}
+.field {
+  margin: 20px 0;
+}
+  .field input {
+    vertical-align: middle;
+  }
+  .field label {
+    vertical-align: middle;
+    margin-left: 10px;
+    color: #555;
+  }
