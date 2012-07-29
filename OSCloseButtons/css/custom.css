@@ -1,0 +1,22 @@
+.macosx .ui-dialog-titlebar-close { right: inherit; left:-32px; }
+.macosx .ui-dialog-buttonset { float: none; }
+.macosx .ui-dialog-buttonset button { float: right; }
+
+
+
+
+
+
+
+
+
+
+body {
+  padding-top: 30px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+.container p {
+  margin: 2em 0;
+}

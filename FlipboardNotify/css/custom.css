@@ -1,0 +1,71 @@
+.flipNotify {
+  position: fixed;
+  top: 50%;
+  margin-top: -30px;
+  height: 60px;
+  width: 100%;
+  font-family: "HelveticaNeue-CondensedBold";
+  font-size: 21px;
+  text-align: center;
+  opacity: 0;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.flipNotify div {
+  position: relative;
+  top: -8px;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  background: rgba(0,0,0,0.75);
+  color: #FFF;
+  padding: 0 1.2em;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+      -webkit-transition: top 200ms ease-out;
+      -moz-transition: top 200ms ease-out;
+      transition: top 200ms ease-out;
+}
+  .flip-fadeIn {
+    opacity: 1;
+  }
+    .flip-fadeIn div {
+      top: 0;
+    }
+  .flip-fadeOut {
+    opacity: 0;
+  }
+    .flip-fadeOut div {
+      top: 8px;
+        -webkit-transition: top 200ms ease-in;
+        -moz-transition: top 200ms ease-in;
+        transition: top 200ms ease-in;
+    }
+  .flip-icon-none {
+    display: none;
+  }
+  .flip-icon-tick {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url(../img/tick.png) center center no-repeat;
+  }
+
+
+
+
+
+
+
+
+
+
+body {
+  padding-top: 30px;
+}
+h1 {
+  margin-bottom: 20px;
+}
