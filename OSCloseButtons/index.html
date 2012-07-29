@@ -1,0 +1,77 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>OS-Dependent Modal & Close Buttons</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../core/css/common.css">
+  <link rel="stylesheet" href="../core/css/bootstrap.css">
+  <link rel="stylesheet" href="../core/kiandra-theme/jquery-ui.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="../core/css/prettify.css">
+  <script src="js/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <a href="../index.html" id="backLink"></a>
+
+  <div class="container">
+
+    <h1>OS-Dependent Modal &amp; Close Buttons</h1>
+
+    <hr>
+        
+    <button class="modalMac btn">Mac Modal</button>
+        
+    <button class="modalWindows btn">Windows Modal</button>
+        
+    <button class="modalAuto btn btn-primary">Auto Detect</button>
+
+    <hr>
+
+    <p>
+      The OS detection is done with some clunky user agent sniffing (boo!) and is written up as a Modernizr test.
+    </p>
+
+<pre class="prettyprint">
+Modernizr.addTest("macosx", function () {
+    var strIndex = navigator.userAgent.toLowerCase().indexOf("mac");
+    return (strIndex > -1);
+});
+</pre>
+
+    <p>
+      From here, it really depends on your plugin library, your theme etc. The Kiandra theme I'm using for this demo has an outdented close button, similar to Growl for Mac. Instead of positioning it to the right, you just lock it to the left, and switch the button floats. Super simple stuff.
+    </p>
+
+<pre class="prettyprint">
+.macosx .ui-dialog-titlebar-close { right: inherit; left:-32px; }
+.macosx .ui-dialog-buttonset { float: none; }
+.macosx .ui-dialog-buttonset button { float: right; }
+</pre>
+
+    <hr>
+        
+    <button class="modalMac btn">Mac Modal</button>
+        
+    <button class="modalWindows btn">Windows Modal</button>
+        
+    <button class="modalAuto btn btn-primary">Auto Detect</button>
+
+  </div>
+
+  <script src="../core/js/jquery.min.js"></script>
+  <script src="../core/js/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+  <script src="../core/js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>
