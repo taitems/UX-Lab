@@ -24,6 +24,9 @@ ul li {
 ul li:last-child {
 	border-bottom: none;
 }
+a, a:visited {
+	color: #00E;
+}
 a.titleLink {
 	display: inline-block;
 	text-decoration: none;
