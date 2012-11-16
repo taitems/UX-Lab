@@ -8,7 +8,7 @@ jQuery.fn.toggleSwitch = function (params) {
 
     var options = $.extend({}, defaults, params);
 
-    $(this).each(function (i, item) {
+    return $(this).each(function (i, item) {
         generateToggle(item);
     });
 
@@ -41,7 +41,7 @@ jQuery.fn.toggleSwitch = function (params) {
         // put slider in the middle
         $slider.insertAfter(
             $contain.children().eq(0)
-		);
+		    );
 
         // bind interaction
         $contain.delegate("label", "click", function () {
@@ -53,9 +53,11 @@ jQuery.fn.toggleSwitch = function (params) {
         });
 
         function toggleValue(slideContain, index) {
-            $(slideContain).find("label").eq(index).addClass("ui-state-active").siblings("label").removeClass("ui-state-active");
-            $(slideContain).parent().find("option").eq(index).attr("selected", true);
-            $(slideContain).find(".ui-slider").slider("value", index * 100);
+            var $slideContain = $(slideContain);
+            $slideContain.find("label").eq(index).addClass("ui-state-active").siblings("label").removeClass("ui-state-active");
+            $slideContain.parent().find("option").attr("selected", false).eq(index).attr("selected", true);
+            $slideContain.parent().find("select").trigger("change");
+            $slideContain.find(".ui-slider").slider("value", index * 100);
         }
 
         // initialise selected option
