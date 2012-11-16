@@ -53,10 +53,14 @@ jQuery.fn.toggleSwitch = function (params) {
         });
 
         function toggleValue(slideContain, index) {
-            var $slideContain = $(slideContain);
+            var $slideContain = $(slideContain), $parent = $slideContain.parent();
+            /* if this option was already selected, then do nothing */
+            if ($parent.find("option").eq(index).attr("selected")) {
+                return;
+            }
             $slideContain.find("label").eq(index).addClass("ui-state-active").siblings("label").removeClass("ui-state-active");
-            $slideContain.parent().find("option").attr("selected", false).eq(index).attr("selected", true);
-            $slideContain.parent().find("select").trigger("change");
+            $parent.find("option").attr("selected", false).eq(index).attr("selected", true);
+            $parent.find("select").trigger("change");
             $slideContain.find(".ui-slider").slider("value", index * 100);
         }
 
