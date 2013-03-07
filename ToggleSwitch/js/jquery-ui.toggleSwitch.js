@@ -100,8 +100,20 @@ jQuery.fn.toggleSwitch = function (params) {
         	// check if we should ignore this change (because toggleValue called it)
         	if($(this).data().toggleValueChange)
         		return;
+        	
             var selection = $contain.find("label").eq(this.selectedIndex);
             toggleValue($contain, ($(selection).is(":first-child")) ? 0 : 1);
+            
+            // update disable
+        	if($(selectObj).is(":disabled")) {
+        		$contain.find("label").addClass("ui-state-disabled");
+        		$slider.addClass("ui-state-disabled");
+        		$slider.slider( "option", "disabled", true );
+        	} else {
+        		$contain.find("label").removeClass("ui-state-disabled");
+        		$slider.removeClass("ui-state-disabled");
+        		$slider.slider( "option", "disabled", false );
+        	}
         });
 
     }
