@@ -74,6 +74,8 @@ jQuery.fn.toggleSwitch = function (params) {
             }
             $slideContain.find("label").eq(index).addClass("ui-state-active").siblings("label").removeClass("ui-state-active");
             $parent.find("option").attr("selected", false).eq(index).attr("selected", true);
+            // avoid custom bubbling of events
+            $parent.data().toggleValueChange = true;
             $parent.trigger("change");
             $parent.removeData("toggleValueChange");
             $slideContain.find(".ui-slider").slider("value", index * 100);
@@ -92,6 +94,15 @@ jQuery.fn.toggleSwitch = function (params) {
 
         // add to DOM
         $(selectObj).before($contain);
+        
+        // toggle value on change of select
+        $(selectObj).change(function(){
+        	// check if we should ignore this change (because toggleValue called it)
+        	if($(this).data().toggleValueChange)
+        		return;
+            var selection = $contain.find("label").eq(this.selectedIndex);
+            toggleValue($contain, ($(selection).is(":first-child")) ? 0 : 1);
+        });
 
     }
 };
