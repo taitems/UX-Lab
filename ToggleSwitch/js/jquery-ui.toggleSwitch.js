@@ -102,7 +102,7 @@ jQuery.fn.toggleSwitch = function (params) {
         		return;
         	
             var selection = $contain.find("label").eq(this.selectedIndex);
-            toggleValue($contain, ($(selection).is(":first-child")) ? 0 : 1);
+            toggleValue($contain, ($(selection).is(":first-child")) ? 0 : 1, true);
             
             // update disable
         	if($(selectObj).is(":disabled")) {
