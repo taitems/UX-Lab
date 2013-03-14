@@ -74,6 +74,13 @@ jQuery.fn.toggleSwitch = function (params) {
             }
             $slideContain.find("label").eq(index).addClass("ui-state-active").siblings("label").removeClass("ui-state-active");
             $parent.find("option").attr("selected", false).eq(index).attr("selected", true);
+			// set the value attribute of the select
+			var optionVal = $parent.find("option").eq(index).attr("selected", true).attr("value");
+			if(!optionVal) {
+				optionVal = $parent.find("option").eq(index).attr("selected", true).html();
+			}
+			$parent.val(optionVal);
+			
             // avoid custom bubbling of events
             $parent.data().toggleValueChange = true;
             $parent.trigger("change");
