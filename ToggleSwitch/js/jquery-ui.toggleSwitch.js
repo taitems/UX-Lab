@@ -3,7 +3,8 @@ jQuery.fn.toggleSwitch = function (params) {
     var defaults = {
         highlight: true,
         width: 25,
-        change: null
+        change: null,
+        stop: null
     };
 
     var options = $.extend({}, defaults, params);
@@ -34,6 +35,10 @@ jQuery.fn.toggleSwitch = function (params) {
                 window.setTimeout(function () {
                     toggleValue(self.parentNode, roundedVal);
                 }, 11);
+
+                if(typeof options.stop === 'function') {
+                    options.stop.call(this, e, roundedVal);
+                }
             },
             range: (options.highlight && !$(selectObj).data("hideHighlight")) ? "max" : null
         }).width(options.width);
