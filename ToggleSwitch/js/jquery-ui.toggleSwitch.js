@@ -41,10 +41,10 @@ jQuery.fn.toggleSwitch = function (params) {
         // put slider in the middle
         $slider.insertAfter(
             $contain.children().eq(0)
-		    );
+        );
 
         // bind interaction
-        $contain.delegate("label", "click", function () {
+        $contain.on("click", "label", function () {
             if ($(this).hasClass("ui-state-active")) {
                 return;
             }
@@ -54,12 +54,8 @@ jQuery.fn.toggleSwitch = function (params) {
 
         function toggleValue(slideContain, index) {
             var $slideContain = $(slideContain), $parent = $slideContain.parent();
-            /* if this option was already selected, then do nothing */
-            if ($parent.find("option").eq(index).attr("selected")) {
-                return;
-            }
             $slideContain.find("label").eq(index).addClass("ui-state-active").siblings("label").removeClass("ui-state-active");
-            $parent.find("option").attr("selected", false).eq(index).attr("selected", true);
+            $parent.find("option").prop("selected", false).eq(index).prop("selected", true);
             $parent.find("select").trigger("change");
             $slideContain.find(".ui-slider").slider("value", index * 100);
         }
